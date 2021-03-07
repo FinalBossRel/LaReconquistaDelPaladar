@@ -28,34 +28,29 @@
 	    <li class="b"><a href="/singin.html">Sing in</a></li>
 	      </ul>
 	  {{/client}}
+	  		  
+<br><br>
+<form id="contact" action="#" method="POST">
 
-  		{{#category}}
-		   <dl>
-		   
-			  <div class="box">
-			  <br>
-			  <dd>{{nameCategory}}</dd>
-			  <br><br>
+	  <div>
+	    <label for="name"><p>Your name:</p></label><br />
+	    <input id="name" class="input" name="name" type="text" value="" size="30" /><br /><br>
+	  </div>
+	  
+	  <div class="row">
+	  
+	    <label for="email"> <p>Your email:</p> </label><br />
+	    <input id="email" class="input" name="email" type="text" value="" size="30" /><br /><br>
+	  </div>
+	  
+	  <div class="row">
+	    <label for="message"> <p>Your message:</p> </label><br />
+	    <textarea id="message" class="input" name="message" rows="7" cols="30"></textarea><br /><br>
+	  </div>
+	    
+	   <input class="boton" id="submit_button" type="submit" value="Send email" />      	    
+</form>
 			  
-			  {{#client}}
-			  <dd class="boton"><a href="/category/{{client.name}}/{{nameCategory}}">See</a></dd>
-			  {{/client}}
-			  
-			  {{^client}}
-			  <dd class="boton"><a href="/category/{{nameCategory}}">See</a></dd>
-			  {{/client}}
-			  </div>
-			   
-			</dl>
-		{{/category}}
-
-  			  
-  			  
-  			  
-
-			
-
- 
 </body>
  
 </html>

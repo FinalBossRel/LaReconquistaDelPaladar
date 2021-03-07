@@ -182,14 +182,28 @@ public class GreetingController {
 		return "categoryItems";
 	}
 	
+	@GetMapping("/shoppingCart")
+	public String shoppingCart(Model model) {
+		return "shoppingCart";
+	}
+	
 	@GetMapping("/shoppingCart/{name}")
 	public String shoppingCart(Model model, @PathVariable String name) {
-		
 		Client c = client.findByName(name);
-		System.out.println(name);
-
 		model.addAttribute("client",c);
 		return "shoppingCart";
+	}
+	
+	@GetMapping("/contact")
+	public String contact(Model model) {
+		return "contact";
+	}
+	
+	@GetMapping("/contact/{name}")
+	public String contact(Model model, @PathVariable String name) {
+		Client c = client.findByName(name);
+		model.addAttribute("client",c);
+		return "contact";
 	}
 	
 	

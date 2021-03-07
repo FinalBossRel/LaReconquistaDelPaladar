@@ -10,26 +10,23 @@
 
 
 	  {{#client}}
-	   <ul class="a">
+	    <ul class="a">
 	   <li class="b"><a class="active" href="/home2/{{name}}">Home</a></li>
-	   <li class="b"><a href="#about">Contact</a></li>
+	   <li class="b"><a href="/contact/{{name}}">Contact</a></li>
 	   <li class="b"><a href="/food/{{name}}">Food</a></li>
-	   <li class="b"><a href="#about">Shopping Cart</a></li>
+	   <li class="b"><a href="/shoppingCart/{{name}}">Shopping Cart</a></li>
 	   <li class="b"><a href="/datosClient/{{name}}">{{name}}</a></li>
-	   </ul>
-	   
-	  
+	    </ul>
 	  {{/client}}
 	  
-	  
 	  {{^client}}
-	  <ul class="a">
+	    <ul class="a">
 	  	<li class="b"><a class="active" href="/">Home</a></li>
-	    <li class="b"><a href="#about">Contact</a></li>
+	    <li class="b"><a href="/contact">Contact</a></li>
 	    <li class="b"><a href="/food">Food</a></li>
-	    <li class="b"><a href="#about">Shopping Cart</a></li>
+	    <li class="b"><a href="/shoppingCart">Shopping Cart</a></li>
 	    <li class="b"><a href="/singin.html">Sing in</a></li>
-	   </ul>
+	      </ul>
 	  {{/client}}		  
 			  
 		
@@ -48,7 +45,10 @@
                     		<li>{{.}}</li>
                     		</ul>
                     	{{/client.carrito}}
-
+                    {{/client}}
+                    
+                    {{^client}}
+                    <p>Carrito de compra:</p>
                     {{/client}}
                     
             </div>

@@ -3,6 +3,7 @@ package es.urjc.code.dad.web.entity;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -25,7 +26,10 @@ public class Client {
 	
 	private ArrayList <String> carrito;
 	
-	@OneToMany
+	@OneToMany(cascade=CascadeType.ALL)
+	private List <Item> items;
+	
+	@OneToMany(cascade=CascadeType.ALL)
 	private List <Orders> orders;
 	
 	public Client() {}
@@ -41,9 +45,18 @@ public class Client {
 		this.password = password;
 		this.orders = new ArrayList<Orders>();
 		this.carrito = new ArrayList<String>();
+		this.items = new ArrayList<Item>();
 	}
 	
-	
+
+
+	public List<Item> getItems() {
+		return items;
+	}
+
+	public void setItems(List<Item> items) {
+		this.items = items;
+	}
 	
 
 	public ArrayList <String> getCarrito() {

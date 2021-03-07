@@ -14,24 +14,16 @@ public class Orders {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long id;
-	private int number;
 	
 	@OneToMany
 	private List <Item> items;
 	
 	public Orders(){}
-	public Orders(int number, List<Item> items) {
+	public Orders(List<Item> items) {
 		super();
-		this.number = number;
 	    this.items = items;
 	}
 	
-	public int getNumber() {
-		return number;
-	}
-	public void setNumber(int number) {
-		this.number = number;
-	}
 	
 	public List<Item> getItems() {
 		return items;
@@ -47,6 +39,4 @@ public class Orders {
 	public void setId(long id) {
 		this.id = id;
 	}
-	
-	
 }

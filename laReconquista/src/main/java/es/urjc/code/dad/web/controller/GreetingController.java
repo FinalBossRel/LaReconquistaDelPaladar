@@ -38,31 +38,43 @@ public class GreetingController {
 	@PostConstruct
 	 public void init(){
 		
-		Item item1 = new Item("Sopa de Macaco", 14, 5);
-		Item item2 = new Item("Salteña", 1, 3);
-		Item item3 = new Item("Sopa", 7, 5);
+		Item item1 = new Item("Sopa", 14, 5);
+		Item item2 = new Item("Saltenia", 6, 3);
+		Item item3 = new Item("Patatas", 7, 5);
+		Item item4 = new Item("Carne", 8, 2);
 		
 		List<Item> Things = new ArrayList<Item>();
+
 		Things.add(item1);
 		Things.add(item2);
 		List<Item> Things2 = new ArrayList<Item>();
 		Things2.add(item3);
 		
+		List<Item> Things3 = new ArrayList<Item>();
+		Things3.add(item4);
+		
 		Client C1 = new Client("Rel","Flores Angulo",625983775,"jcarlosfa.rel@gmail.com","C/Las Flores","1234");
-		Client C2 = new Client("Roberto","Toaza Castro",625983775,"elNoob@gmail.com","C/Calle Falsa","1111");
-		Orders ordersx = new Orders(1,null);
+		Client C2 = new Client("Alberto","Del Pozo",123456789,"usuario@gmail.com","C/Calle Del Mar","1111");
+		
+		Orders ordersx = new Orders(null);
 		
 		Category cx1 = new Category("Comida Latina",Things);
-		Category cx2= new Category("Comida Boliviana",Things2);
+		Category cx2 = new Category("Comida Boliviana",Things2);
+		Category cx3 = new Category("Comida Argentina",Things3);
+
 
 		
 		items.save(item1);
 		items.save(item2);
 		items.save(item3);
+		items.save(item4);
+		
 		orders.save(ordersx);
 		
 		category.save(cx1);
 		category.save(cx2);
+		category.save(cx3);
+
 		client.save(C1);
 		client.save(C2);
 
@@ -162,20 +174,24 @@ public class GreetingController {
 	
 	@GetMapping("/cart/{name}/{nameItem}/{nameCategory}")
 	public String carrito(Model model, @PathVariable String name,  @PathVariable String nameItem, @PathVariable String nameCategory) {
-		
-		System.out.println("he pasado la merca"+" "+name+" "+nameItem+" "+nameCategory);
+				
 		Client c = client.findByName(name);
 		Category cate = category.findByNameCategory(nameCategory);
 		List <Item> aux = new ArrayList<Item>(cate.getItems());
-		
 		Item itemAux = items.findByNameItem(nameItem);
+		
+		if(c.getCarrito().contains(nameItem) == false) {
+			c.getItems().add(itemAux);
+		}
+		
 		if(itemAux.getStock() > 0) {
 			itemAux.setStock( itemAux.getStock()-1);
 			c.getCarrito().add(nameItem);
 			client.save(c);
 			items.save(itemAux);
 		}
-			
+
+	
 		model.addAttribute("items", aux);		
 		model.addAttribute("client",c);
 		model.addAttribute("category",cate);
@@ -208,40 +224,27 @@ public class GreetingController {
 	
 	
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	@GetMapping("/aniadir/{name}") //{nameItem}")
-	public String aniadir2(Model model, @PathVariable String name, @PathVariable String nameItem) {
-		Client c = client.findByName(name);
-		List<Category> cate = new ArrayList<Category>(category.findAll());
-		List <Item> aux = new ArrayList<Item>(items.findAll());		
+
+	@GetMapping("/pay/{name}")
+	public String pay(Model model, @PathVariable String name) {
 		
-		model.addAttribute("category",cate);
-		model.addAttribute("items", aux);		
+		Client c = client.findByName(name);
+		if(c.getCarrito().size() > 0) {
+			Orders orden1 = new Orders(c.getItems());	
+			c.setCarrito(new ArrayList<String>());
+			c.setItems(new ArrayList<Item>());
+			
+			c.getOrders().add(orden1);
+			
+			client.save(c);
+
+		}
 		model.addAttribute("client",c);
-		return "food";
+		return "shoppingCart";
 	}
+	
+	
+	
 	
 	
 	

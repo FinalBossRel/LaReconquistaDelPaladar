@@ -15,7 +15,7 @@ Se desarrollará una aplicación web destinada a la venta de comida latinoameric
 \- Servicio de pago online.
 
 
-## Autores
+## Autor
 
 #### Juan Carlos Flores Angulo
 - jc.flores@alumnos.urjc.es

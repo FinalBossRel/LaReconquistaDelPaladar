@@ -31,8 +31,12 @@
 			  			<br>
 			  			<dd>{{nameItem}}</dd>
 			  			<br><br>
+			  			{{#client}}
 			  			<dd class="boton"><a href="/aniadir/{{client.name}}/{{nameItem}}">Añadir</a></dd>
-			  			
+			  			{{/client}}
+			  			{{^client}}
+			  			<dd class="boton"><a href="./singin.html">Account Login</a></dd>
+			  			{{/client}}
 			  			</div>
 			  		</dl>
 			  {{/items}}

@@ -48,12 +48,14 @@ public class GreetingController {
 		Client C1 = new Client("Rel","Flores Angulo",625983775,"jcarlosfa.rel@gmail.com","C/Las Flores","1234", null);
 		Client C2 = new Client("Roberto","Toaza Castro",625983775,"elNoob@gmail.com","C/Calle Falsa","1111", null);
 		Orders ordersx = new Orders(1,null);
+		
 		Category cx1 = new Category("Comida Latina",Things);
 		
 		items.save(item1);
 		items.save(item2);
 		items.save(item3);
 		orders.save(ordersx);
+		
 		category.save(cx1);
 		client.save(C1);
 		client.save(C2);
@@ -109,9 +111,6 @@ public class GreetingController {
 	@GetMapping("/food")
 	public String food(Model model){
 		List <Item> aux = new ArrayList<Item>(items.findAll());		
-		Client aux2 = client.findByName("Rel");
-		
-		model.addAttribute("client", aux2);
 		model.addAttribute("items", aux);
 		return "food";
 	}
@@ -124,7 +123,7 @@ public class GreetingController {
 			model.addAttribute("client", c);
 		List <Item> aux = new ArrayList<Item>(items.findAll());
 		
-		model.addAttribute("clients",c);
+		model.addAttribute("client",c);
 		model.addAttribute("items", aux);
 		
 		return "food";

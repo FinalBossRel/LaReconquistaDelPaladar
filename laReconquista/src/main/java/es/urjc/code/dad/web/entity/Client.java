@@ -1,5 +1,6 @@
 package es.urjc.code.dad.web.entity;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.Entity;
@@ -22,13 +23,15 @@ public class Client {
 	private String address;
 	private String password;
 	
+	private ArrayList <String> carrito;
+	
 	@OneToMany
 	private List <Orders> orders;
 	
 	public Client() {}
 	
 	public Client(String name, String surname, int telephone, String mail, String address, String password
-			, List<Orders> orders) {
+			) {
 		super();
 		this.name = name;
 		this.surname = surname;
@@ -36,9 +39,20 @@ public class Client {
 		this.mail = mail;
 		this.address = address;
 		this.password = password;
-		this.orders = orders;
+		this.orders = new ArrayList<Orders>();
+		this.carrito = new ArrayList<String>();
 	}
 	
+	
+	
+
+	public ArrayList <String> getCarrito() {
+		return carrito;
+	}
+
+	public void setCarrito(ArrayList <String> carrito) {
+		this.carrito = carrito;
+	}
 
 	public String getName() {
 		return name;

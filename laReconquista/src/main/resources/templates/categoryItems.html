@@ -14,7 +14,7 @@
 	   <li class="b"><a class="active" href="/home2/{{name}}">Home</a></li>
 	   <li class="b"><a href="#about">Contact</a></li>
 	   <li class="b"><a href="/food/{{name}}">Food</a></li>
-	   <li class="b"><a href="#about">Shopping Cart</a></li>
+	   <li class="b"><a href="/shoppingCart/{{name}}">Shopping Cart</a></li>
 	   <li class="b"><a href="/datosClient/{{name}}">{{name}}</a></li>
 	   </ul>
 	  {{/client}}
@@ -26,37 +26,28 @@
 	    <li class="b"><a href="#about">Contact</a></li>
 	    <li class="b"><a href="/food">Food</a></li>
 	    <li class="b"><a href="#about">Shopping Cart</a></li>
-	    <li class="b"><a href="./singin.html">Sing in</a></li>
+	    <li class="b"><a href="/singin.html">Sing in</a></li>
 	   </ul>
-	  {{/client}}
-
-  		{{#category}}
-		   <dl>
-		   
-			  <div class="box">
-			  <br>
-			  <dd>{{nameCategory}}</dd>
-			  <br><br>
+	  {{/client}}		  
 			  
-			  {{#client}}
-			  <dd class="boton"><a href="/category/{{client.name}}/{{nameCategory}}">See</a></dd>
-			  {{/client}}
-			  
-			  {{^client}}
-			  <dd class="boton"><a href="/category/{{nameCategory}}">See</a></dd>
-			  {{/client}}
-			  </div>
-			   
-			</dl>
-		{{/category}}
-
-  			  
-  			  
-  			  
-
 			
-
- 
+			 {{#items}}
+			  		<dl>
+			  			<div class="box">
+			  			<br>
+			  			<dd>{{nameItem}}</dd>
+			  			<br><br>
+			  			{{#client}}
+			  			<dd class="boton"><a href="/cart/{{client.name}}/{{nameItem}}/{{category.nameCategory}}">Añadir</a></dd>
+			  			{{/client}}
+			  			
+			  			{{^client}}
+			  			<dd class="boton"><a href="/singin.html">Account Login</a></dd>
+			  			{{/client}}
+			  			</div>
+			  		</dl>
+			  {{/items}}
+			  
 </body>
  
 </html>

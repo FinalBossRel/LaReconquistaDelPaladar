@@ -7,6 +7,7 @@ import es.urjc.code.dad.web.entity.Category;
 
 public interface CategoryRepository extends JpaRepository<Category,Long>{
 	
-	//List<Category> findByNameCategory(String name);
+	Category findByNameCategory(String name);
+	List<Category> findAll();
 
 }

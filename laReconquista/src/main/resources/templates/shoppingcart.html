@@ -17,6 +17,8 @@
 	   <li class="b"><a href="#about">Shopping Cart</a></li>
 	   <li class="b"><a href="/datosClient/{{name}}">{{name}}</a></li>
 	   </ul>
+	   
+	  
 	  {{/client}}
 	  
 	  
@@ -26,37 +28,37 @@
 	    <li class="b"><a href="#about">Contact</a></li>
 	    <li class="b"><a href="/food">Food</a></li>
 	    <li class="b"><a href="#about">Shopping Cart</a></li>
-	    <li class="b"><a href="./singin.html">Sing in</a></li>
+	    <li class="b"><a href="/singin.html">Sing in</a></li>
 	   </ul>
-	  {{/client}}
-
-  		{{#category}}
-		   <dl>
-		   
-			  <div class="box">
-			  <br>
-			  <dd>{{nameCategory}}</dd>
-			  <br><br>
+	  {{/client}}		  
 			  
-			  {{#client}}
-			  <dd class="boton"><a href="/category/{{client.name}}/{{nameCategory}}">See</a></dd>
-			  {{/client}}
-			  
-			  {{^client}}
-			  <dd class="boton"><a href="/category/{{nameCategory}}">See</a></dd>
-			  {{/client}}
-			  </div>
-			   
-			</dl>
-		{{/category}}
-
-  			  
-  			  
-  			  
-
-			
-
+		
+    <div id="envoltura">
+        <div id="contenedor">
  
+            <div id="cabecera"></div>
+ 
+            <div id="cuerpo">
+               
+                    {{#client}}
+                    	<p>Carrito de compra:</p>
+                    	
+                    	{{#client.carrito}}
+                    		<ul> 
+                    		<li>{{.}}</li>
+                    		</ul>
+                    	{{/client.carrito}}
+
+                    {{/client}}
+                    
+            </div>
+ 
+            <div id="pie"></div>
+        </div>
+ 
+    </div>
+
+			  
 </body>
  
 </html>

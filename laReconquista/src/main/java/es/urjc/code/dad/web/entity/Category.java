@@ -15,24 +15,24 @@ public class Category {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long id;
 	
-	private String name;
+	private String nameCategory;
 	
 	@OneToMany
 	private List <Item> items;
 	
-	
-	public Category(String name, List<Item> items) {
+	public Category(){}
+	public Category(String nameCategory, List<Item> items) {
 		super();
-		this.name = name;
+		this.nameCategory = nameCategory;
 		this.items = items;
 	}
 
 	public String getName() {
-		return name;
+		return nameCategory;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	public void setName(String nameCategory) {
+		this.nameCategory = nameCategory;
 	}
 
 	public List<Item> getItems() {

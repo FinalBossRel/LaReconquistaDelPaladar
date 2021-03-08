@@ -55,7 +55,7 @@ Página para nuevos usuarios en la que se piden datos del cliente.
 ## DatosClient.html
 ![datosCliente](https://user-images.githubusercontent.com/63256402/110304536-03f7f500-7ffc-11eb-8161-54b2d0dd0d44.png)
 Página que enseña los datos del cliente.
-## 6 - Diagramas <a name"Diagramas">
+## 6 - Diagramas <a name="Diagramas">
 # Diagrama De Navegación
 ![diagrama de navegacion](https://user-images.githubusercontent.com/63256402/110327917-e71eea00-801a-11eb-81ff-614245881db6.jpeg)
 Diagrama que muestra la navegación entre las distintas pantallas de la página web.

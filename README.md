@@ -6,7 +6,7 @@
 ## [5 Capturas De Pantalla](#Capturas)
 ## [6 Diagramas](#Diagramas)
 
-## 1 - :ordenador: Descripción general <a name="descripcion">
+## 1 - :pc: Descripción general <a name="descripcion">
 Se desarrollará una aplicación web destinada a la venta de comida latinoamericana a domicilio, en la que los usuarios podrán navegar por las diferentes categorías de las comidas ofertadas sin necesidad de registrarse. Para formalizar el pedido deberán iniciar sesión con su usuario y completar su compra.
 
 ## 2 - Entidades principales <a name="Entidades">

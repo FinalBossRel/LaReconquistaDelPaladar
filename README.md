@@ -15,7 +15,7 @@ Se desarrollará una aplicación web destinada a la venta de comida latinoameric
 - Pedido: esta entidad tendrá asociada un numero de productos y un usuario, asociandolos. Esta entidad tambien contendrá el coste final total.
 - Categoría de productos: esta entidad llevará asosciado un identificador único y contendrá de 1 a N productos que se recojan en ella.
 
-## 3 - Descripción servicio interno <a name="Servicio">
+## 3 - :lock: Descripción servicio interno <a name="Servicio">
 - Cuando el usuario hace un pedido se le enviará un correo electrónico con un pdf donde se incluirá el resumen de su pedido.
 - Servicio de pago online.
 

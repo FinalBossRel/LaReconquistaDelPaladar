@@ -52,7 +52,7 @@ Página para nuevos usuarios en la que se piden datos del cliente.
 ![datosCliente](https://user-images.githubusercontent.com/63256402/110304536-03f7f500-7ffc-11eb-8161-54b2d0dd0d44.png)
 Página que enseña los datos del cliente.
 # Diagrama De Navegación
-![diagrama de navegacion](https://user-images.githubusercontent.com/63256402/110327663-8a233400-801a-11eb-9054-b5c104536e3d.jpeg)
+![diagrama de navegacion](https://user-images.githubusercontent.com/63256402/110327917-e71eea00-801a-11eb-81ff-614245881db6.jpeg)
 Diagrama que muestra la navegación entre las distintas pantallas de la página web.
 # Diagrama E/R
 ![Diagrama entidad_relacion](https://user-images.githubusercontent.com/63256402/110317622-b0da6e00-800c-11eb-9a80-ae741759024f.jpeg)

@@ -61,7 +61,11 @@ Página que enseña los datos del cliente.
 # Diagrama De Navegación
 ![diagrama de navegacion](https://user-images.githubusercontent.com/63256402/110327917-e71eea00-801a-11eb-81ff-614245881db6.jpeg)
 Diagrama que muestra la navegación entre las distintas pantallas de la página web.
-# Diagrama E/R
+## Diagrama de clases UML
+  
+![DiagramaUml](https://user-images.githubusercontent.com/63256402/110390140-d3e53c00-8065-11eb-91e9-6db19bbdbd72.jpeg)
+
+## Diagrama E/R
 ![Diagrama entidad_relacion](https://user-images.githubusercontent.com/63256402/110317622-b0da6e00-800c-11eb-9a80-ae741759024f.jpeg)
 Diagrama en el que se muestra la realación estre las entidades de la pagina web.
 

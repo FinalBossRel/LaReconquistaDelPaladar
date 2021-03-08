@@ -1,6 +1,6 @@
 # La Reconquista Del Paladar
-
-## Descripción general
+## [1 Descripcion General](#descripcion)
+## Descripción general <a name="descripcion">
 Se desarrollará una aplicación web destinada a la venta de comida latinoamericana a domicilio, en la que los usuarios podrán navegar por las diferentes categorías de las comidas ofertadas sin necesidad de registrarse. Para formalizar el pedido deberán iniciar sesión con su usuario y completar su compra.
 
 ## Entidades principales

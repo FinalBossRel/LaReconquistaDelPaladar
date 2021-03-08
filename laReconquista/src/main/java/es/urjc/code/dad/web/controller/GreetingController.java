@@ -1,6 +1,7 @@
 package es.urjc.code.dad.web.controller;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 import javax.annotation.PostConstruct;
@@ -35,6 +36,7 @@ public class GreetingController {
 	@Autowired private CategoryRepository category;
 	 
 	 
+
 	@PostConstruct
 	 public void init(){
 		
@@ -42,6 +44,7 @@ public class GreetingController {
 		Item item2 = new Item("Saltenia", 6, 3);
 		Item item3 = new Item("Patatas", 7, 5);
 		Item item4 = new Item("Carne", 8, 2);
+		Item item5 = new Item("Agua", 8, 2);
 		
 		List<Item> Things = new ArrayList<Item>();
 
@@ -49,18 +52,24 @@ public class GreetingController {
 		Things.add(item2);
 		List<Item> Things2 = new ArrayList<Item>();
 		Things2.add(item3);
+		Things2.add(item4);
 		
 		List<Item> Things3 = new ArrayList<Item>();
-		Things3.add(item4);
+		Things3.add(item5);
+
 		
 		Client C1 = new Client("Rel","Flores Angulo",625983775,"jcarlosfa.rel@gmail.com","C/Las Flores","1234");
 		Client C2 = new Client("Alberto","Del Pozo",123456789,"usuario@gmail.com","C/Calle Del Mar","1111");
 		
-		Orders ordersx = new Orders(null);
+		/*
+		 * Orders ordersx = new Orders(Things3); Orders orders2 = new Orders(Things2);
+		 */
 		
-		Category cx1 = new Category("Comida Latina",Things);
-		Category cx2 = new Category("Comida Boliviana",Things2);
+		
+		Category cx1 = new Category("Comida Latina",Things); 
+		Category cx2 = new Category("Comida Boliviana",Things2); 
 		Category cx3 = new Category("Comida Argentina",Things3);
+		 
 
 
 		
@@ -68,15 +77,18 @@ public class GreetingController {
 		items.save(item2);
 		items.save(item3);
 		items.save(item4);
+		items.save(item5);
+		/*
+		 * orders.save(ordersx); orders.save(orders2);
+		 */
 		
-		orders.save(ordersx);
 		
-		category.save(cx1);
-		category.save(cx2);
+		category.save(cx1); 
+		category.save(cx2); 
 		category.save(cx3);
-
-		client.save(C1);
+		client.save(C1); 
 		client.save(C2);
+		 
 
 	 	 
 	 }
@@ -230,7 +242,15 @@ public class GreetingController {
 		
 		Client c = client.findByName(name);
 		if(c.getCarrito().size() > 0) {
-			Orders orden1 = new Orders(c.getItems());	
+			
+			for(Item xx : c.getItems()) {
+				System.out.println("Name : "+xx.getName());
+			}
+			
+			List aux = new ArrayList<Item>(c.getItems());
+			Orders orden1 = new Orders(aux);	
+			orders.save(orden1);
+			
 			c.setCarrito(new ArrayList<String>());
 			c.setItems(new ArrayList<Item>());
 			
@@ -239,6 +259,35 @@ public class GreetingController {
 			client.save(c);
 
 		}
+		model.addAttribute("client",c);
+		return "shoppingCart";
+	}
+	
+	@GetMapping("/delete/{name}/{food}")
+	public String delete(Model model, @PathVariable String name, @PathVariable String food) {
+		Client c = client.findByName(name);
+		System.out.println(name+" ------------- "+food +" T " +c.getItems().size());
+		
+		Iterator<Item> iter = c.getItems().iterator();
+		
+		while(iter.hasNext()){
+			Item auxIt = iter.next();
+			if(auxIt.getName().equals(food)) {
+				iter.remove();
+				System.out.println(auxIt.getName()+ "----Borrado--- " +food);
+				c.getCarrito().remove(food);
+			}
+		}
+		/*
+		 * for(Item auxItem: iter) {
+		 * 
+		 * if(auxItem.getName().equals(food)) { c.getItems().remove(auxItem);
+		 * System.out.println(auxItem.getName()+" -----Borrado------- "+food+
+		 * " T: "+c.getItems().size()); } }
+		 */
+		
+		
+		client.save(c);
 		model.addAttribute("client",c);
 		return "shoppingCart";
 	}

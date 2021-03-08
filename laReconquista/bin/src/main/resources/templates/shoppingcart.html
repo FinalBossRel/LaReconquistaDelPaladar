@@ -41,9 +41,9 @@
                     	<p>Carrito de compra:</p>
                     	
                     	{{#client.carrito}}
-                    		<dl> 
-                    		<dd>{{.}}   <a href="/delete/{{name}}/{{.}}" class="boton2">  Delete </a></dd>
-                    		</dl>
+                    		<ul> 
+                    		<li>{{.}}</li>
+                    		</ul>
                     	{{/client.carrito}}
                     	<p class="boton"><a href="/pay/{{name}}">Pay</a></p>
                     {{/client}}

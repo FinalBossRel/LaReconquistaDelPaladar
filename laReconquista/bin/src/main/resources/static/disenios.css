@@ -134,25 +134,6 @@ input#contrasenia{
     position: relative;
     top: 3px;
 }
-
-.boton2{
-    background: #ff0000;
-    background: -moz-linear-gradient(top,#eee,#ccc);
-    background: -moz-linear-gradient(top,#fc6,#f63);
-
-    /*Color del texto*/
-    color: #000000;
-    width: 15px;
-}
- 
-/*Tip estas instrucciones animan al boton enviar
- * para que se vea como si se pulsara*/
-.boton2:active{
-    position: relative;
-    top: 3px;
-}
-
-
  
 #pie{
     border-top: 5px solid #333;

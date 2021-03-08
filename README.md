@@ -42,7 +42,7 @@ Página en la que se exponen las categorias que contienen los productos ofertado
 ![shoppingcart](https://user-images.githubusercontent.com/63256402/110304255-a5cb1200-7ffb-11eb-9b84-8c6be4e94c0c.png)
 Pagina que muestra el carrito de compra con los productos añadidos por el cliente.
 
-![carritoconcosas](https://user-images.githubusercontent.com/63256402/110304736-386bb100-7ffc-11eb-9946-7f5835a94432.png)
+![carritoconcosas](https://user-images.githubusercontent.com/63256402/110384169-8f55a280-805d-11eb-8c0e-ef09b9f57b78.png)
 Una vez que el cliente se registre podrá añadir productos al carrito.
 
 ## Singin.html

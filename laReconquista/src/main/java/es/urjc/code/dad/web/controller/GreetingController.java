@@ -273,7 +273,6 @@ public class GreetingController {
 			Item auxIt = iter.next();
 			if(auxIt.getName().equals(food)) {
 				iter.remove();
-				System.out.println(auxIt.getName()+ "----Borrado--- " +food);
 				c.getCarrito().remove(food);
 			}
 		}

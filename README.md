@@ -22,10 +22,33 @@ Se desarrollará una aplicación web destinada a la venta de comida latinoameric
 - GII + GIC 135
 - ##### Github: [FinalBossRel](https://github.com/FinalBossRel)
 
-## Home
+## Home.html
 ![principal](https://user-images.githubusercontent.com/63256402/110303348-94353a80-7ffa-11eb-945d-0306e0dddb32.png)
 Página principal donde se exponen algunos productos y se muestra un pequeño resumen.
 
-## Contact
+## Contact.html
 ![contact](https://user-images.githubusercontent.com/63256402/110303627-e24a3e00-7ffa-11eb-9e3e-0cdce42ac5b2.png)
-Página donde el usuario puede comunicarse con los administradores de la web.
+Página donde el usuario puede comunicarse con los administradores de la web(en progreso).
+
+## Food.html
+![food](https://user-images.githubusercontent.com/63256402/110303835-29383380-7ffb-11eb-9711-40d6b96086f1.png)
+Página en la que se exponen las categorias que contienen los productos ofertados.
+## Shoppingcart.html
+![shoppingcart](https://user-images.githubusercontent.com/63256402/110304255-a5cb1200-7ffb-11eb-9b84-8c6be4e94c0c.png)
+Pagina que muestra el carrito de compra con los productos añadidos por el cliente.
+
+![carritoconcosas](https://user-images.githubusercontent.com/63256402/110304736-386bb100-7ffc-11eb-9946-7f5835a94432.png)
+Una vez que el cliente se registre podrá añadir productos al carrito.
+
+## Singin.html
+![account](https://user-images.githubusercontent.com/63256402/110304131-816f3580-7ffb-11eb-8e4c-04e3077cc352.png)
+Página en la que el cliente debe registrarse para poder comprar
+
+## Createaccount.html
+![newUser](https://user-images.githubusercontent.com/63256402/110304372-d27f2980-7ffb-11eb-9a98-bab3d8daef9a.png)
+Página para nuevos usuarios en la que se piden datos del cliente.
+
+## DatosClient.html
+![datosCliente](https://user-images.githubusercontent.com/63256402/110304536-03f7f500-7ffc-11eb-8161-54b2d0dd0d44.png)
+Página que enseña los datos del cliente.
+

@@ -21,3 +21,11 @@ Se desarrollará una aplicación web destinada a la venta de comida latinoameric
 - jc.flores@alumnos.urjc.es
 - GII + GIC 135
 - ##### Github: [FinalBossRel](https://github.com/FinalBossRel)
+
+## Home
+![principal](https://user-images.githubusercontent.com/63256402/110303348-94353a80-7ffa-11eb-945d-0306e0dddb32.png)
+Página principal donde se exponen algunos productos y se muestra un pequeño resumen.
+
+## Contact
+![contact](https://user-images.githubusercontent.com/63256402/110303627-e24a3e00-7ffa-11eb-9e3e-0cdce42ac5b2.png)
+Página donde el usuario puede comunicarse con los administradores de la web.

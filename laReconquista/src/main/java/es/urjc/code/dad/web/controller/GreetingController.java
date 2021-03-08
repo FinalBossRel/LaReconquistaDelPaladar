@@ -266,7 +266,6 @@ public class GreetingController {
 	@GetMapping("/delete/{name}/{food}")
 	public String delete(Model model, @PathVariable String name, @PathVariable String food) {
 		Client c = client.findByName(name);
-		System.out.println(name+" ------------- "+food +" T " +c.getItems().size());
 		
 		Iterator<Item> iter = c.getItems().iterator();
 		
@@ -278,14 +277,7 @@ public class GreetingController {
 				c.getCarrito().remove(food);
 			}
 		}
-		/*
-		 * for(Item auxItem: iter) {
-		 * 
-		 * if(auxItem.getName().equals(food)) { c.getItems().remove(auxItem);
-		 * System.out.println(auxItem.getName()+" -----Borrado------- "+food+
-		 * " T: "+c.getItems().size()); } }
-		 */
-		
+
 		
 		client.save(c);
 		model.addAttribute("client",c);

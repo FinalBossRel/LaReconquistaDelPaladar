@@ -52,3 +52,7 @@ Página para nuevos usuarios en la que se piden datos del cliente.
 ![datosCliente](https://user-images.githubusercontent.com/63256402/110304536-03f7f500-7ffc-11eb-8161-54b2d0dd0d44.png)
 Página que enseña los datos del cliente.
 
+# Diagrama E/R
+![Diagrama entidad_relacion](https://user-images.githubusercontent.com/63256402/110317622-b0da6e00-800c-11eb-9a80-ae741759024f.jpeg)
+Diagrama en el que se muestra la realación estre las entidades de la pagina web.
+

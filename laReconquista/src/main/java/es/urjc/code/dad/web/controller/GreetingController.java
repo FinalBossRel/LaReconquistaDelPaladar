@@ -277,7 +277,7 @@ public class GreetingController {
 			}
 		}
 
-		
+		// Cambios
 		client.save(c);
 		model.addAttribute("client",c);
 		return "shoppingCart";

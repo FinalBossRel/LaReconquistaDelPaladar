@@ -63,7 +63,7 @@ Página que enseña los datos del cliente.
 ![diagrama de navegacion](https://user-images.githubusercontent.com/63256402/110327917-e71eea00-801a-11eb-81ff-614245881db6.jpeg)
 Diagrama que muestra la navegación entre las distintas pantallas de la página web.
 ## Diagrama de clases UML
-![DiagramaUML](https://user-images.githubusercontent.com/63256402/110448342-66ff8f80-80c1-11eb-9160-14eb9bc4f3a8.jpeg)
+![DiagramaUML](https://user-images.githubusercontent.com/63256402/110469110-83a7c180-80d9-11eb-9c79-89bacae0dc87.jpeg)
 Diagrama UML en el que se muestra la composición y agregación de las clases.
 ## Diagrama E/R
 ![Diagrama entidad_relacion](https://user-images.githubusercontent.com/63256402/110317622-b0da6e00-800c-11eb-9a80-ae741759024f.jpeg)
